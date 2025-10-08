@@ -1,0 +1,516 @@
+[
+  {
+    "Empresa": "Banco ABC Brasil",
+    "Setor": "Bancário / Serviços Financeiros",
+    "Faturamento 2024 (R$ mil)": null,
+    "Lucro Líquido 2024 (R$ mil)": 971300,
+    "Carteira de Crédito Bruta 2024 (R$ mil)": 53200000,
+    "PDD - Balanço 2024 (R$ mil)": null,
+    "PDD - DRE 2024 (R$ mil)": null
+  },
+  {
+    "Empresa": "Aeris Indústria e Comércio de Equipamentos para Geração de Energia S.A.",
+    "Setor": "Energia Eólica / Equipamentos Industriais",
+    "Faturamento 2024 (R$ mil)": 1516500,
+    "Lucro Líquido 2024 (R$ mil)": -934100,
+    "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": null,
+    "PDD - DRE 2024 (R$ mil)": null
+  },
+  {
+    "Empresa": "Brava Energia (antiga 3R Petroleum)",
+    "Setor": "Petróleo e Gás",
+    "Faturamento 2024 (R$ mil)": 10095900,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": null,
+    "PDD - DRE 2024 (R$ mil)": null
+  },
+  {
+    "Empresa": "Três Tentos Agroindustrial S.A.",
+    "Setor": "Agroindustrial",
+    "Faturamento 2024 (R$ mil)": null,
+    "Lucro Líquido 2024 (R$ mil)": 756400,
+    "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": null,
+    "PDD - DRE 2024 (R$ mil)": 21346
+  },
+  {
+    "Empresa": "Alphaville S.A.",
+    "Setor": "Incorporação Imobiliária",
+    "Faturamento 2024 (R$ mil)": 678829,
+    "Lucro Líquido 2024 (R$ mil)": 66144,
+    "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": 6766,
+    "PDD - DRE 2024 (R$ mil)": 4546
+  },
+  {
+    "Empresa": "Ambev S.A.",
+    "Setor": "Bebidas / Consumo",
+    "Faturamento 2024 (R$ mil)": 65174567,
+    "Lucro Líquido 2024 (R$ mil)": 17485227,
+    "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": null,
+    "PDD - DRE 2024 (R$ mil)": null
+  },
+  {
+    "Empresa": "AES Tietê Energia (Auren Energia)",
+    "Setor": "Energia Elétrica - Geração",
+    "Faturamento 2024 (R$ mil)": 8060000,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": null,
+    "PDD - DRE 2024 (R$ mil)": null
+  },
+  {
+    "Empresa": "Allied Tecnologia S.A.",
+    "Setor": "Tecnologia / Distribuição de Eletrônicos",
+    "Faturamento 2024 (R$ mil)": 5521381,
+    "Lucro Líquido 2024 (R$ mil)": 128900,
+    "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": null,
+    "PDD - DRE 2024 (R$ mil)": 15270
+  },
+  {
+    "Empresa": "Ambipar Participações e Empreendimentos S.A.",
+    "Setor": "Serviços Ambientais",
+    "Faturamento 2024 (R$ mil)": 6413676,
+    "Lucro Líquido 2024 (R$ mil)": 70000,
+    "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": 19774,
+    "PDD - DRE 2024 (R$ mil)": 4066
+  },
+  {
+    "Empresa": "Alpargatas S.A.",
+    "Setor": "Calçados e Vestuário",
+    "Faturamento 2024 (R$ mil)": 5972300,
+    "Lucro Líquido 2024 (R$ mil)": 109800,
+    "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": 79807,
+    "PDD - DRE 2024 (R$ mil)": null
+  },
+  {
+    "Empresa": "AgroGalaxy Participações S.A. (em Recuperação Judicial)",
+    "Setor": "Agronegócio / Distribuição de Insumos",
+    "Faturamento 2024 (R$ mil)": 1912550,
+    "Lucro Líquido 2024 (R$ mil)": -1622489,
+    "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": null,
+    "PDD - DRE 2024 (R$ mil)": 129294
+  },
+  {
+    "Empresa": "Alupar Investimento S.A.",
+    "Setor": "Energia Elétrica - Transmissão e Geração",
+    "Faturamento 2024 (R$ mil)": 4002100,
+    "Lucro Líquido 2024 (R$ mil)": 1859906,
+    "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": null,
+    "PDD - DRE 2024 (R$ mil)": null
+  },
+  {
+    "Empresa": "Azul S.A.",
+    "Setor": "Aviação / Transporte Aéreo",
+    "Faturamento 2024 (R$ mil)": 19526208,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": null,
+    "PDD - DRE 2024 (R$ mil)": null
+  },
+  {
+    "Empresa": "B3 S.A. - Brasil, Bolsa, Balcão",
+    "Setor": "Infraestrutura de Mercado Financeiro",
+    "Faturamento 2024 (R$ mil)": 10600000,
+    "Lucro Líquido 2024 (R$ mil)": 5000000,
+    "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": null,
+    "PDD - DRE 2024 (R$ mil)": null
+  },
+  {
+    "Empresa": "Americanas S.A. (em Recuperação Judicial)",
+    "Setor": "Varejo",
+    "Faturamento 2024 (R$ mil)": 16629000,
+    "Lucro Líquido 2024 (R$ mil)": 8252,
+    "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": null,
+    "PDD - DRE 2024 (R$ mil)": null
+  },
+  {
+    "Empresa": "Atacadão S.A. (Grupo Carrefour Brasil)",
+    "Setor": "Varejo Alimentar / Cash & Carry", 
+    "Faturamento 2024 (R$ mil)": 120600000,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Carteira de Crédito Bruta 2024 (R$ mil)": 28400000,
+    "PDD - Balanço 2024 (R$ mil)": null,
+    "PDD - DRE 2024 (R$ mil)": null
+  },
+  {
+    "Empresa": "Atom Educação e Editora S.A.",
+    "Setor": "Educação / Editorial",
+    "Faturamento 2024 (R$ mil)": 34365,
+    "Lucro Líquido 2024 (R$ mil)": 459,
+    "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": null,
+    "PDD - DRE 2024 (R$ mil)": null
+  },
+  {
+      "Empresa": "Ânima Holding S.A.",
+    "Setor": "Educação",
+    "Faturamento 2024 (R$ mil)": 3801379,
+    "Lucro Líquido 2024 (R$ mil)": 204444,
+    "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": null,
+    "PDD - DRE 2024 (R$ mil)": 178526
+  },
+  {
+    "Empresa": "Armac Locação, Logística e Serviços S.A.",
+    "Setor": "Logística / Locação de Máquinas",
+    "Faturamento 2024 (R$ mil)": 1640333,
+    "Lucro Líquido 2024 (R$ mil)": 170197,
+    "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": null,
+    "PDD - DRE 2024 (R$ mil)": null
+  },
+  {
+    "Empresa": "Arezzo&Co (Azzas 2154 S.A.)",
+    "Setor": "Moda / Calçados e Vestuário",
+    "Faturamento 2024 (R$ mil)": 11578500,
+    "Lucro Líquido 2024 (R$ mil)": 168900,
+    "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": null,
+    "PDD - DRE 2024 (R$ mil)": null
+  },
+  {
+  "Empresa": "Banco Bradesco S.A.",
+  "Setor": "Bancário / Serviços Financeiros",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 115600000,
+  "PDD - DRE 2024 (R$ mil)": 63500000
+  },
+  {
+  "Empresa": "Bradespar S.A.",
+  "Setor": "Holding de Participações",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": null,
+  "PDD - DRE 2024 (R$ mil)": null
+  },
+  {
+  "Empresa": "brMalls (Allos S.A.)",
+  "Setor": "Shopping Centers / Imobiliário",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": null,
+  "PDD - DRE 2024 (R$ mil)": null
+ },
+ {
+  "Empresa": "BrasilAgro – Companhia Brasileira de Propriedades Agrícolas",
+  "Setor": "Agronegócio / Propriedades Rurais",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 4031,
+  "PDD - DRE 2024 (R$ mil)": 0
+},
+{
+  "Empresa": "Banco BTG Pactual S.A.",
+  "Setor": "Bancário / Serviços Financeiros",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 799230,
+  "PDD - DRE 2024 (R$ mil)": 350000
+},
+{
+  "Empresa": "Banco Santander (Brasil) S.A.",
+  "Setor": "Bancário / Serviços Financeiros",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 60700000,
+  "PDD - DRE 2024 (R$ mil)": 31600000
+},
+{
+  "Empresa": "Banco Inter (Inter&Co)",
+  "Setor": "Bancário / Serviços Financeiros",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 6888301,
+  "PDD - DRE 2024 (R$ mil)": 3308280
+},
+{
+  "Empresa": "Banco Pine S.A.",
+  "Setor": "Bancário / Serviços Financeiros",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 1486000,
+  "PDD - DRE 2024 (R$ mil)": 346881
+},
+{
+  "Empresa": "Banrisul S.A.",
+  "Setor": "Bancário / Serviços Financeiros",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 10413700,
+  "PDD - DRE 2024 (R$ mil)": 2700000
+},
+{
+  "Empresa": "Banco do Brasil S.A.",
+  "Setor": "Bancário / Serviços Financeiros",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 100400000,
+  "PDD - DRE 2024 (R$ mil)": 47706000
+},
+{
+  "Empresa": "Banco Pan S.A.",
+  "Setor": "Bancário / Serviços Financeiros",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 5338353,
+  "PDD - DRE 2024 (R$ mil)": 6139000
+},
+{
+  "Empresa": "BR Partners",
+  "Setor": "Banco de Investimento / Serviços Financeiros",
+  "Faturamento 2024 (R$ mil)": 581200,
+  "Lucro Líquido 2024 (R$ mil)": 193700,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": null,
+  "PDD - DRE 2024 (R$ mil)": null
+},
+{
+  "Empresa": "Boa Safra Sementes S.A.",
+  "Setor": "Agronegócio / Sementes",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 4199,
+  "PDD - DRE 2024 (R$ mil)": 665
+},
+{
+  "Empresa": "BB Seguridade Participações S.A.",
+  "Setor": "Seguros / Previdência / Capitalização",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": null,
+  "PDD - DRE 2024 (R$ mil)": null
+},
+{
+  "Empresa": "Banco BMG S.A.",
+  "Setor": "Bancário / Serviços Financeiros",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 1909713,
+  "PDD - DRE 2024 (R$ mil)": 325000
+},
+{
+  "Empresa": "Bombril S.A.",
+  "Setor": "Higiene e Limpeza",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": null,
+  "PDD - DRE 2024 (R$ mil)": 1687
+},
+{
+  "Empresa": "Bemobi Mobile Tech S.A.",
+  "Setor": "Tecnologia / Serviços Digitais",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 17738,
+  "PDD - DRE 2024 (R$ mil)":5322
+},
+{ 
+  "Empresa": "Blau Farmacêutica S.A.",
+  "Setor": "Indústria Farmacêutica",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 33581,
+  "PDD - DRE 2024 (R$ mil)": 14688
+},
+{
+  "Empresa": "Braskem S.A.",
+  "Setor": "Petroquímico / Químicos",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 185000,
+  "PDD - DRE 2024 (R$ mil)": 104000
+},
+{
+  "Empresa": "BRF S.A.",
+  "Setor": "Alimentos / Proteína Animal",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 726764,
+  "PDD - DRE 2024 (R$ mil)": 28817
+}, 
+{
+  "Empresa": "Brisanet Serviços de Telecomunicações S.A.",
+  "Setor": "Telecomunicações",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 31802,
+  "PDD - DRE 2024 (R$ mil)": 73735
+}, 
+{
+  "Empresa": "C&A Modas S.A.",
+  "Setor": "Varejo de Moda",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": null,
+  "PDD - DRE 2024 (R$ mil)": null
+},
+{
+  "Empresa": "Caixa Seguridade Participações S.A.",
+  "Setor": "Seguros / Previdência / Capitalização",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": null,
+  "PDD - DRE 2024 (R$ mil)": null
+},
+{
+  "Empresa": "Camil Alimentos S.A.",
+  "Setor": "Alimentos / Consumo",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 38645,
+  "PDD - DRE 2024 (R$ mil)": 6861
+},
+{
+  "Empresa": "Companhia Brasileira de Alumínio - CBA",
+  "Setor": "Metais / Alumínio",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 29834,
+  "PDD - DRE 2024 (R$ mil)": 8389
+},
+{
+  "Empresa": "CCR S.A.",
+  "Setor": "Concessões de Infraestrutura / Mobilidade",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": null,
+  "PDD - DRE 2024 (R$ mil)": 6346
+},
+{
+  "Empresa": "Grupo SBF S.A. (Centauro)",
+  "Setor": "Varejo Esportivo",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": null,
+  "PDD - DRE 2024 (R$ mil)": 735
+},
+{
+  "Empresa": "Companhia Brasileira de Distribuição (GPA)",
+  "Setor": "Varejo / Supermercados",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 1000,
+  "PDD - DRE 2024 (R$ mil)": 38000
+},
+{
+  "Empresa": "Companhia Energética de Minas Gerais - CEMIG",
+  "Setor": "Energia Elétrica",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 850307,
+  "PDD - DRE 2024 (R$ mil)": null
+}, 
+{
+  "Empresa": "Companhia Energética de Pernambuco - CELPE",
+  "Setor": "Energia Elétrica / Distribuição",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": null,
+  "PDD - DRE 2024 (R$ mil)": 2411000
+}, 
+{
+  "Empresa": "Enel Brasil S.A.",
+  "Setor": "Energia Elétrica",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 5397103,
+  "PDD - DRE 2024 (R$ mil)": 1151207
+}
+,
+{
+  "Empresa": "Companhia de Ferro Ligas da Bahia - FERBASA",
+  "Setor": "Mineração / Metalurgia",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 222,
+  "PDD - DRE 2024 (R$ mil)": null
+},
+{
+  "Empresa": "Companhia de Gás de São Paulo - COMGÁS",
+  "Setor": "Energia / Gás Natural",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 92720,
+  "PDD - DRE 2024 (R$ mil)": 16994
+},
+{
+  "Empresa": "Companhia de Locação das Américas - Unidas",
+  "Setor": "Locação de Veículos",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 219782,
+  "PDD - DRE 2024 (R$ mil)": 39358
+},
+{
+  "Empresa": "Companhia de Saneamento Básico do Estado de São Paulo - SABESP",
+  "Setor": "Saneamento",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 1248209,
+  "PDD - DRE 2024 (R$ mil)": 557789
+},
+{
+  "Empresa": "Companhia de Saneamento de Minas Gerais - COPASA",
+  "Setor": "Saneamento",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 326841,
+  "PDD - DRE 2024 (R$ mil)": 214862
+},
+{
+  "Empresa": "Companhia de Saneamento do Paraná - SANEPAR",
+  "Setor": "Saneamento",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Carteira de Crédito Bruta 2024 (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 636354,
+  "PDD - DRE 2024 (R$ mil)": 124439
+}
+]

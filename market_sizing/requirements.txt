@@ -1,0 +1,36 @@
+# -------------------
+# PDF handling
+# -------------------
+pdfplumber
+pymupdf
+camelot-py[cv]    # para tabelas, depende do opencv
+tabula-py         # alternativa para extrair tabelas
+
+# -------------------
+# Document parsing
+# -------------------
+unstructured[pdf]
+
+# -------------------
+# Vector DB + LLM pipeline
+# -------------------
+chromadb
+langchain
+langchain-community
+langchain-openai
+langchain-pinecone
+langchain-text-splitters
+
+# -------------------
+# Utils
+# -------------------
+pandas
+numpy
+tqdm
+
+# -------------------
+# Notebook support
+# -------------------
+ipykernel
+jupyter
+
