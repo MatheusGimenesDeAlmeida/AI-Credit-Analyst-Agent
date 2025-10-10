@@ -1,0 +1,107 @@
+{
+  "processed_files": {
+    "3R PETROLEUM.pdf": {
+      "hash": "888d52d51fdb5ccbc0527b27652e08eb",
+      "processed_at": "2025-10-10T05:13:49.411520",
+      "chunks": 482
+    },
+    "3TENTOS.pdf": {
+      "hash": "883847b44fd9a2195c6437e116e9610f",
+      "processed_at": "2025-10-10T05:14:10.892062",
+      "chunks": 357
+    },
+    "AERIS.pdf": {
+      "hash": "694e88afc2cc6997ea0a9c03d792341e",
+      "processed_at": "2025-10-10T05:14:25.993097",
+      "chunks": 252
+    },
+    "AES TIETE ENERGIA.pdf": {
+      "hash": "4db42ac08a450301693ec898f031f639",
+      "processed_at": "2025-10-10T05:15:01.499098",
+      "chunks": 435
+    },
+    "AGROGALAXY.pdf": {
+      "hash": "498ed630fa897ef4d750d0927ff09341",
+      "processed_at": "2025-10-10T05:15:46.738746",
+      "chunks": 634
+    },
+    "ALLIED TECNOLOGIA.pdf": {
+      "hash": "875d8db820b077b313ea63808ea475de",
+      "processed_at": "2025-10-10T05:16:08.367041",
+      "chunks": 296
+    },
+    "ALPARGATAS.pdf": {
+      "hash": "a71dc8647736055d7619b6b8027c2e37",
+      "processed_at": "2025-10-10T05:16:40.928583",
+      "chunks": 319
+    },
+    "Alphaville SA.pdf": {
+      "hash": "7c378b3ac9553b897fe1f26ff10de142",
+      "processed_at": "2025-10-10T05:17:01.406044",
+      "chunks": 290
+    },
+    "ALUPAR.pdf": {
+      "hash": "3444463fb127642b7811ae9b3e39e299",
+      "processed_at": "2025-10-10T05:17:46.650239",
+      "chunks": 412
+    },
+    "AMBEV.pdf": {
+      "hash": "9d3dcded8c28c495c56e36603addcfae",
+      "processed_at": "2025-10-10T05:18:22.544131",
+      "chunks": 455
+    },
+    "AMBIPAR.pdf": {
+      "hash": "2758f477eadb1cd1facbaecbd198cbfd",
+      "processed_at": "2025-10-10T05:18:47.615210",
+      "chunks": 364
+    },
+    "ANIMA.pdf": {
+      "hash": "1377f67126a950d02dccc67300fb82dd",
+      "processed_at": "2025-10-10T05:19:11.909773",
+      "chunks": 340
+    },
+    "AREZZO.pdf": {
+      "hash": "59d26823647f58d7a752964ebcbb3f25",
+      "processed_at": "2025-10-10T05:19:43.636205",
+      "chunks": 429
+    },
+    "ARMAC.pdf": {
+      "hash": "ea48934bd0380570421f11150da9805a",
+      "processed_at": "2025-10-10T05:19:59.249135",
+      "chunks": 206
+    },
+    "ATACADAO.pdf": {
+      "hash": "85d4d3656b5e0084a7ae5cf3e9f1c844",
+      "processed_at": "2025-10-10T05:20:34.694767",
+      "chunks": 433
+    },
+    "ATOM.pdf": {
+      "hash": "a3ab6aeefbb153af5e6d4c2d19c19d24",
+      "processed_at": "2025-10-10T05:20:48.669799",
+      "chunks": 178
+    },
+    "AZUL.pdf": {
+      "hash": "bcac9f6a42afa78e73cbe02d5c7fdbe1",
+      "processed_at": "2025-10-10T05:21:09.343374",
+      "chunks": 254
+    },
+    "B2W.pdf": {
+      "hash": "1d7cb2dd1e53ebc1c00d46f6818f6078",
+      "processed_at": "2025-10-10T05:21:33.721823",
+      "chunks": 317
+    },
+    "B3.pdf": {
+      "hash": "438b8afba55e7131b86632aa1cb9f5ba",
+      "processed_at": "2025-10-10T05:22:05.502296",
+      "chunks": 356
+    },
+    "BANCO ABC.pdf": {
+      "hash": "3a43b3993ecb50fd326d2257f4acbf15",
+      "processed_at": "2025-10-10T05:22:13.489565",
+      "chunks": 60
+    }
+  },
+  "failed_files": {},
+  "last_run": null,
+  "total_chunks": 6869
+}

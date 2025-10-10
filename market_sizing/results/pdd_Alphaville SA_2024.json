@@ -1,0 +1,10 @@
+[
+  {
+    "company": "Alphaville SA",
+    "year": 2024,
+    "status": "error",
+    "error": "Missing some input keys: {'year', 'company'}",
+    "pdd_value": null,
+    "confidence": null
+  }
+]

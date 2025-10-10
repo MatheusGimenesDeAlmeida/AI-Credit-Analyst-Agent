@@ -1,10 +1,16 @@
 # -------------------
+# Environment & Config
+# -------------------
+python-dotenv
+
+# -------------------
 # PDF handling
 # -------------------
+pypdf
 pdfplumber
 pymupdf
-camelot-py[cv]    # para tabelas, depende do opencv
-tabula-py         # alternativa para extrair tabelas
+camelot-py[cv]
+tabula-py
 
 # -------------------
 # Document parsing
@@ -14,6 +20,7 @@ unstructured[pdf]
 # -------------------
 # Vector DB + LLM pipeline
 # -------------------
+pinecone-client
 chromadb
 langchain
 langchain-community
@@ -22,15 +29,21 @@ langchain-pinecone
 langchain-text-splitters
 
 # -------------------
+# OpenAI
+# -------------------
+openai
+
+# -------------------
 # Utils
 # -------------------
 pandas
 numpy
 tqdm
+tiktoken
+pydantic
 
 # -------------------
 # Notebook support
 # -------------------
 ipykernel
 jupyter
-
