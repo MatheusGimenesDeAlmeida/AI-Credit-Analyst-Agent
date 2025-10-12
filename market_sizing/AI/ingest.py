@@ -1,34 +1,31 @@
 import os
 import json
-import re
+import hashlib
+import time
 from pathlib import Path
-from typing import List, Dict, Optional
 from datetime import datetime
+from typing import List, Dict
 from dotenv import load_dotenv
 from pinecone import Pinecone
-from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+from langchain_community.document_loaders import PyPDFLoader
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_openai import OpenAIEmbeddings
 from langchain_pinecone import PineconeVectorStore
+import re
 
 # ========= CONFIGURAÇÕES =========
 load_dotenv()
 
+PDF_DIR = Path("./Demonstrativos")
 INDEX_NAME = "financial-reports-2"
-RESULTS_DIR = Path("./results")
-RESULTS_DIR.mkdir(exist_ok=True)
+CHUNK_SIZE = 1200
+CHUNK_OVERLAP = 200
+PINECONE_REGION = "us-east-1"
+BATCH_SIZE = 100  # Chunks por lote
+PDFS_PER_SESSION = None  # None = processa todos de uma vez, ou coloque 20 para processar 20 por vez
 
-# Variações de nomenclatura de PDD 
-PDD_QUERIES = [
-    "Provisão para Devedores Duvidosos",
-    "Provisão/Reversão de Créds. Liquidação Duvidosa",
-    "Provisão para Créditos de Liquidação Duvidosa",
-    "Provisão ou (reversão) para perdar de créditos com liquidação duvidosa",
-    "PCLD",
-    "PDD",
-    "Perdas estimadas com créditos de liquidação duvidosa",
-    "Provisão para perdas de créditos esperadas",
-    "Redução ao valor recuperável de contas a receber",
-    "Impairment de contas a receber",
-]
+# Arquivo de controle (rastreia o que já foi processado)
+TRACKING_FILE = Path("./processing_log.json")
 
 # ========== CHAVES =========
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -37,12 +34,157 @@ PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 if not OPENAI_API_KEY or not PINECONE_API_KEY:
     raise ValueError("API keys não definidas")
 
+# ========== SISTEMA DE TRACKING ==========
+class ProcessingTracker:
+    """Gerencia o histórico de processamento para evitar retrabalho"""
+    
+    def __init__(self, tracking_file: Path):
+        self.tracking_file = tracking_file
+        self.data = self._load()
+    
+    def _load(self) -> Dict:
+        """Carrega histórico de processamento"""
+        if self.tracking_file.exists():
+            with open(self.tracking_file, 'r') as f:
+                return json.load(f)
+        return {
+            "processed_files": {},
+            "failed_files": {},
+            "last_run": None,
+            "total_chunks": 0
+        }
+    
+    def _save(self):
+        """Salva histórico"""
+        with open(self.tracking_file, 'w') as f:
+            json.dump(self.data, f, indent=2)
+    
+    def is_processed(self, file_path: Path, file_hash: str) -> bool:
+        """Verifica se arquivo já foi processado com mesmo conteúdo"""
+        filename = file_path.name
+        if filename in self.data["processed_files"]:
+            return self.data["processed_files"][filename]["hash"] == file_hash
+        return False
+    
+    def mark_processed(self, file_path: Path, file_hash: str, num_chunks: int):
+        """Marca arquivo como processado"""
+        self.data["processed_files"][file_path.name] = {
+            "hash": file_hash,
+            "processed_at": datetime.now().isoformat(),
+            "chunks": num_chunks
+        }
+        self.data["total_chunks"] += num_chunks
+        self.data["last_run"] = datetime.now().isoformat()
+        self._save()
+    
+    def mark_failed(self, file_path: Path, error: str):
+        """Registra falha no processamento"""
+        self.data["failed_files"][file_path.name] = {
+            "error": str(error),
+            "failed_at": datetime.now().isoformat()
+        }
+        self._save()
+    
+    def get_stats(self) -> Dict:
+        """Retorna estatísticas de processamento"""
+        return {
+            "processed": len(self.data["processed_files"]),
+            "failed": len(self.data["failed_files"]),
+            "total_chunks": self.data["total_chunks"]
+        }
+
+# ========== FUNÇÕES AUXILIARES ==========
+def get_document_hash(pdf_path: Path) -> str:
+    """Gera hash do PDF para detectar mudanças"""
+    with open(pdf_path, 'rb') as f:
+        return hashlib.md5(f.read()).hexdigest()
+
+def preprocess_text(text: str) -> str:
+    """Limpa e normaliza texto"""
+    text = re.sub(r' +', ' ', text)
+    text = re.sub(r'\n{3,}', '\n\n', text)
+    return text.strip()
+
+def identify_financial_sections(text: str) -> bool: 
+    """Identifica seções financeiras relevantes"""
+    keywords = [
+        'balanço patrimonial', 'ativo circulante', 'contas a receber',
+        'notas explicativas', 'instrumentos financeiros', 'provisões',
+        'clientes', 'duplicatas a receber', 'pcld', 'pdd', 'descrição da conta',
+        'dfs consolidadas', 'receita', 'demonstração do fluxo de caixa', 
+        'despesas', 'demonstração do resultado', 'dre'
+    ]
+    text_lower = text.lower()
+    return any(keyword in text_lower for keyword in keywords)
+
+def estimate_cost(num_chunks: int, avg_tokens_per_chunk: int = 300) -> float:
+    """Estima custo de embedding (OpenAI ada-002: $0.0001/1k tokens)"""
+    total_tokens = num_chunks * avg_tokens_per_chunk
+    cost = (total_tokens / 1000) * 0.0001
+    return cost
+
 # ========== INICIALIZAÇÃO ==========
-print("🔍 Sistema de Extração de PDD")
+print("🚀 Sistema de Ingestão em Larga Escala")
 print("=" * 60)
 
 pc = Pinecone(api_key=PINECONE_API_KEY)
+
+# Cria índice se não existir
+existing = [i.name for i in pc.list_indexes()]
+if INDEX_NAME not in existing:
+    print(f"Criando índice '{INDEX_NAME}'...")
+    pc.create_index(
+        name=INDEX_NAME,
+        dimension=1536,
+        metric="cosine",
+        spec={"serverless": {"cloud": "aws", "region": PINECONE_REGION}}
+    )
+    time.sleep(10)  # Aguarda criação
+    print("✅ Índice criado!")
+
 index = pc.Index(INDEX_NAME)
+tracker = ProcessingTracker(TRACKING_FILE)
+
+# ========== DESCOBERTA DE ARQUIVOS ==========
+if not PDF_DIR.exists():
+    raise FileNotFoundError(f"❌ Pasta {PDF_DIR} não existe")
+
+all_pdfs = sorted(PDF_DIR.glob("*.pdf"))
+print(f"\n📁 Total de PDFs na pasta: {len(all_pdfs)}")
+
+# Filtra PDFs já processados
+pdfs_to_process = []
+for pdf in all_pdfs:
+    file_hash = get_document_hash(pdf)
+    if not tracker.is_processed(pdf, file_hash):
+        pdfs_to_process.append(pdf)
+
+stats = tracker.get_stats()
+print(f"✅ Já processados: {stats['processed']}")
+print(f"❌ Com falhas: {stats['failed']}")
+print(f"📊 Total de chunks indexados: {stats['total_chunks']}")
+print(f"🆕 Arquivos novos para processar: {len(pdfs_to_process)}")
+
+if not pdfs_to_process:
+    print("\n✨ Todos os arquivos já foram processados!")
+    exit(0)
+
+# Limita quantidade por sessão para segurança
+if PDFS_PER_SESSION:
+    pdfs_this_session = pdfs_to_process[:PDFS_PER_SESSION]
+    print(f"\n⚡ Processando {len(pdfs_this_session)} PDFs nesta sessão")
+    print(f"   (Restantes: {len(pdfs_to_process) - len(pdfs_this_session)})")
+else:
+    pdfs_this_session = pdfs_to_process
+    print(f"\n⚡ Processando TODOS os {len(pdfs_this_session)} PDFs nesta sessão")
+
+# ========== PROCESSAMENTO ==========
+splitter = RecursiveCharacterTextSplitter(
+    chunk_size=CHUNK_SIZE,
+    chunk_overlap=CHUNK_OVERLAP,
+    separators=["\n\n", "\n", ". ", " ", ""],
+    keep_separator=True
+)
 
 embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
 vectorstore = PineconeVectorStore(
@@ -51,362 +193,111 @@ vectorstore = PineconeVectorStore(
     text_key="text"
 )
 
-# Verifica estatísticas do índice
-stats = index.describe_index_stats()
-print(f"📊 Vetores no índice: {stats.total_vector_count}")
-print(f"📁 Namespaces: {stats.namespaces}")
+total_chunks_session = 0
+start_time = time.time()
 
-# ========== FUNÇÕES DE BUSCA ==========
-def search_pdd_multi_query(vectorstore, company: str, year: int, k: int = 20) -> List:
-    """Busca usando múltiplas queries para maximizar recall"""
-    all_results = []
-    seen_content = set()
+for idx, pdf_path in enumerate(pdfs_this_session, 1):
+    print(f"\n{'='*60}")
+    print(f"📄 [{idx}/{len(pdfs_this_session)}] {pdf_path.name}")
+    print(f"{'='*60}")
     
-    for query in PDD_QUERIES[:5]:  # Usa as 5 principais variações
-        query_with_year = f"{query} {year}"
-        
-        retriever = vectorstore.as_retriever(
-            search_type="similarity_score_threshold",
-            search_kwargs={
-                "k": k,
-                "score_threshold": 0.65,
-                "filter": {
-                    "company": company,
-                    "is_financial_section": True
-                }
-            }
-        )
-        
-        try:
-            results = retriever.invoke(query_with_year)  # Mudou de get_relevant_documents para invoke
-            
-            for doc in results:
-                content_hash = hash(doc.page_content[:100])
-                if content_hash not in seen_content:
-                    seen_content.add(content_hash)
-                    all_results.append(doc)
-        except Exception as e:
-            print(f"  ⚠️ Erro na query '{query}': {e}")
-            continue
-    
-    return all_results
-
-# ========== PROMPT ESPECIALIZADO ==========
-PROMPT_TEMPLATE = """Você é um agente de inteligência artificial especializado em análise de demonstrações financeiras de empresas brasileiras, com expertise em identificar informações sobre a Provisão para Devedores Duvidosos (PDD).
-
-==================================================
-CONTEXTO DOS DOCUMENTOS DA EMPRESA {company}:
-==================================================
-{context}
-
-==================================================
-TAREFA PRINCIPAL:
-==================================================
-Identifique o valor da Provisão para Devedores Duvidosos (PDD) ou Provisão para Créditos de Liquidação Duvidosa (PCLD) para o ano de {year}.
-
-Você deve encontrar especificamente:
-1. **SALDO DA PDD NO BALANÇO PATRIMONIAL CONSOLIDADO DE {year}** (estoque no final do período)
-   - Localização típica: Ativo Circulante → Contas a Receber → Provisão (valor negativo)
-   
-2. **DESPESA/REVERSÃO DE PDD NA DRE CONSOLIDADA DE {year}** (fluxo/movimento do período)
-   - Representa o quanto foi constituído ou revertido no resultado do ano
-
-==================================================
-NOMENCLATURAS POSSÍVEIS DA PDD:
-==================================================
-A PDD pode aparecer com diversos nomes:
-- "Provisão para Devedores Duvidosos"
-- "Provisão para Créditos de Liquidação Duvidosa" (PCLD)
-- "Provisão para perdas associadas ao risco de crédito"
-- "Perdas esperadas com operações de crédito"
-- "Perda esperada para crédito de liquidação duvidosa"
-- "Allowance for doubtful accounts" (em inglês)
-- "Provisão para perdas em operações de crédito"
-- "Redução ao valor recuperável de contas a receber"
-- "Estimativa de perda com clientes"
-- "Impairment de contas a receber"
-
-==================================================
-INSTRUÇÕES CRÍTICAS:
-==================================================
-1. **CONSOLIDADO APENAS**: Retorne SOMENTE valores consolidados
-   - Ignore colunas individuais como "Controladora", "Banco", "Segmento Individual"
-   
-2. **ANO ESPECÍFICO**: Considere APENAS o exercício de {year}
-   - Se houver comparativos com anos anteriores, pegue só {year}
-   
-3. **LOCALIZAÇÃO DOS VALORES**:
-   - Balanço Patrimonial: Seção "Ativo Circulante" → "Contas a Receber"
-   - DRE: Seção "Despesas Operacionais" ou "Resultado Financeiro"
-   - Notas Explicativas: Geralmente nota sobre "Instrumentos Financeiros" ou "Contas a Receber"
-
-4. **FORMATO DOS VALORES**:
-   - PDD geralmente aparece como valor NEGATIVO (reduzindo contas a receber) ou entre parênteses
-   - Se houver movimentação (saldo inicial, adições, reversões, baixas), busque o SALDO FINAL em {year}
-   - Preste atenção nas UNIDADES: pode estar em R$ (unidade), R$ mil ou R$ milhões
-
-5. **NÃO INVENTE NÚMEROS**: 
-   - Se não encontrar o valor específico de {year} consolidado, diga claramente "PDD não identificada"
-   - Seja honesto sobre a confiança da informação encontrada
-
-==================================================
-FORMATO DA RESPOSTA (OBRIGATÓRIO):
-==================================================
-
-**SALDO NO BALANÇO PATRIMONIAL {year}:**
-Valor: [número com unidade, ex: R$ 5.234 mil] ou [Não identificado]
-Localização: [Balanço Patrimonial - Ativo Circulante / Nota Explicativa X, Página Y]
-Nomenclatura: [nome exato encontrado no documento]
-
-**DESPESA/REVERSÃO NA DRE {year}:**
-Valor: [número com unidade, ex: R$ 1.200 mil] ou [Não identificado]
-Localização: [DRE / Nota Explicativa X, Página Y]
-Tipo: [Constituição/Reversão/Complemento]
-
-**CONFIANÇA:** [Alta/Média/Baixa]
-
-**OBSERVAÇÕES:** [Qualquer informação adicional relevante, como contexto sobre movimentações ou metodologia de cálculo mencionada]
-
-==================================================
-EXEMPLO DE RESPOSTA IDEAL:
-==================================================
-
-**SALDO NO BALANÇO PATRIMONIAL 2024:**
-Valor: R$ 15.234 mil
-Localização: Balanço Patrimonial Consolidado - Ativo Circulante, Nota Explicativa 8, Página 45
-Nomenclatura: Provisão para Créditos de Liquidação Duvidosa (PCLD)
-
-**DESPESA/REVERSÃO NA DRE 2024:**
-Valor: R$ 3.450 mil
-Localização: DRE Consolidada - Despesas Operacionais, Nota Explicativa 8, Página 48
-Tipo: Constituição de provisão
-
-**CONFIANÇA:** Alta
-
-**OBSERVAÇÕES:** A empresa utiliza modelo de perda esperada (IFRS 9). Houve aumento de 28% na provisão devido à deterioração da carteira de clientes no setor de varejo.
-
-==================================================
-PERGUNTA:
-==================================================
-Qual o valor da PDD (saldo no balanço e movimentação na DRE) para o ano de {year}?
-
-RESPOSTA:
-"""
-
-# ========== LLM ==========
-llm = ChatOpenAI(
-    model="gpt-4o",
-    temperature=0,
-    openai_api_key=OPENAI_API_KEY
-)
-
-# ========== VALIDAÇÃO COM REGEX ==========
-def validate_pdd_value(text: str) -> Optional[str]:
-    """Extrai valor monetário da resposta"""
-    patterns = [
-        r'R\$\s*(\d{1,3}(?:\.\d{3})*(?:,\d{2})?)\s*(?:mil|milhões|MM)?',
-        r'(\d{1,3}(?:\.\d{3})*(?:,\d{2})?)\s*(?:mil|milhões|MM)',
-    ]
-    
-    for pattern in patterns:
-        match = re.search(pattern, text, re.IGNORECASE)
-        if match:
-            return match.group(0)
-    return None
-
-def parse_confidence(text: str) -> str:
-    """Extrai nível de confiança"""
-    text_lower = text.lower()
-    if 'confiança: alta' in text_lower or 'alta confiança' in text_lower:
-        return "Alta"
-    elif 'confiança: média' in text_lower or 'média confiança' in text_lower:
-        return "Média"
-    elif 'confiança: baixa' in text_lower or 'baixa confiança' in text_lower:
-        return "Baixa"
-    return "Desconhecida"
-
-# ========== FUNÇÃO PRINCIPAL DE EXTRAÇÃO (CORRIGIDA) ==========
-def extract_pdd(company: str, year: int = 2024, verbose: bool = True) -> Dict:
-    """Extrai PDD de uma empresa específica"""
-    
-    if verbose:
-        print(f"\n{'='*60}")
-        print(f"🏢 Empresa: {company}")
-        print(f"📅 Ano: {year}")
-        print(f"{'='*60}")
-    
-    # Busca multi-query
-    relevant_docs = search_pdd_multi_query(vectorstore, company, year, k=20)
-    
-    if not relevant_docs:
-        print(f"⚠️  Nenhum documento relevante encontrado para {company}")
-        return {
-            "company": company,
-            "year": year,
-            "status": "no_documents",
-            "pdd_value": None,
-            "confidence": None,
-            "full_response": None
-        }
-    
-    if verbose:
-        print(f"📊 Encontrados {len(relevant_docs)} trechos relevantes")
-        print(f"\nPreview dos 2 trechos mais relevantes:")
-        for i, doc in enumerate(relevant_docs[:2], 1):
-            print(f"\n--- Trecho {i} (Página {doc.metadata.get('page')}) ---")
-            preview = doc.page_content[:250].replace('\n', ' ')
-            print(f"{preview}...")
-    
-    # Monta contexto
-    context = "\n\n---\n\n".join([doc.page_content for doc in relevant_docs[:15]])
-    
-    # Consulta o LLM DIRETAMENTE
     try:
-        # Formata o prompt com todas as variáveis
-        prompt = PROMPT_TEMPLATE.format(
-            company=company,
-            context=context,
-            year=year
-        )
+        company = pdf_path.stem
+        file_hash = get_document_hash(pdf_path)
         
-        # Chama o LLM
-        llm_response = llm.invoke(prompt).content
+        # Carrega e processa PDF
+        loader = PyPDFLoader(str(pdf_path))
+        pages = loader.load()
         
-        if verbose:
-            print(f"\n{'='*60}")
-            print("🤖 RESPOSTA DO LLM:")
-            print(f"{'='*60}")
-            print(llm_response)
-            print(f"{'='*60}")
+        texts = []
+        metadatas = []
         
-        # Valida e extrai informações
-        pdd_value = validate_pdd_value(llm_response)
-        confidence = parse_confidence(llm_response)
+        for page_idx, page in enumerate(pages, start=1):
+            page_text = preprocess_text(page.page_content or "")
+            if not page_text:
+                continue
+            
+            is_relevant = identify_financial_sections(page_text)
+            chunks = splitter.split_text(page_text)
+            
+            for i, chunk in enumerate(chunks, start=1):
+                texts.append(chunk)
+                metadatas.append({
+                    "company": company,
+                    "source_file": pdf_path.name,
+                    "page": page_idx,
+                    "chunk_index": i,
+                    "is_financial_section": is_relevant,
+                    "document_hash": file_hash,
+                    "processed_at": datetime.now().isoformat()
+                })
         
-        # Verifica se encontrou
-        if "não identificada" in llm_response.lower() or not pdd_value:
-            status = "not_found"
-        else:
-            status = "found"
+        if not texts:
+            print("⚠️  Nenhum conteúdo extraído")
+            tracker.mark_failed(pdf_path, "No content extracted")
+            continue
         
-        return {
-            "company": company,
-            "year": year,
-            "status": status,
-            "pdd_value": pdd_value,
-            "confidence": confidence,
-            "full_response": llm_response,
-            "num_docs_retrieved": len(relevant_docs),
-            "extracted_at": datetime.now().isoformat()
-        }
+        print(f"📊 Gerados {len(texts)} chunks")
+        
+        # Estima custo
+        cost = estimate_cost(len(texts))
+        print(f"💰 Custo estimado: ${cost:.4f}")
+        
+        # Indexa em lotes
+        total_batches = (len(texts) + BATCH_SIZE - 1) // BATCH_SIZE
+        
+        for i in range(0, len(texts), BATCH_SIZE):
+            batch_texts = texts[i:i+BATCH_SIZE]
+            batch_metadatas = metadatas[i:i+BATCH_SIZE]
+            batch_num = (i // BATCH_SIZE) + 1
+            
+            print(f"  📦 Lote {batch_num}/{total_batches}: {len(batch_texts)} chunks...", end=" ")
+            
+            try:
+                vectorstore.add_texts(
+                    texts=batch_texts,
+                    metadatas=batch_metadatas
+                )
+                print("✅")
+                time.sleep(0.5)  # Rate limiting
+            except Exception as e:
+                print(f"❌ Erro: {e}")
+                tracker.mark_failed(pdf_path, f"Batch {batch_num} failed: {e}")
+                raise
+        
+        # Marca como processado
+        tracker.mark_processed(pdf_path, file_hash, len(texts))
+        total_chunks_session += len(texts)
+        print(f"✅ {pdf_path.name} indexado com sucesso!")
         
     except Exception as e:
-        print(f"❌ Erro ao processar {company}: {e}")
-        return {
-            "company": company,
-            "year": year,
-            "status": "error",
-            "error": str(e),
-            "pdd_value": None,
-            "confidence": None
-        }
+        print(f"❌ ERRO ao processar {pdf_path.name}: {e}")
+        tracker.mark_failed(pdf_path, str(e))
+        continue
 
-# ========== EXTRAÇÃO EM LOTE ==========
-def extract_all_companies(year: int = 2024) -> List[Dict]:
-    """Extrai PDD de todas as empresas indexadas"""
-    
-    # Lista empresas únicas no índice
-    retriever = vectorstore.as_retriever(search_kwargs={"k": 1000})
-    sample_docs = retriever.invoke("empresa demonstrativo financeiro")
-    
-    companies = set()
-    for doc in sample_docs:
-        company = doc.metadata.get("company")
-        if company:
-            companies.add(company)
-    
-    companies = sorted(list(companies))
-    print(f"\n📋 Empresas encontradas: {len(companies)}")
-    print(f"   {', '.join(companies[:5])}..." if len(companies) > 5 else f"   {', '.join(companies)}")
-    
-    results = []
-    for i, company in enumerate(companies, 1):
-        print(f"\n[{i}/{len(companies)}] Processando {company}...")
-        result = extract_pdd(company, year, verbose=False)
-        results.append(result)
-        
-        # Preview
-        if result['status'] == 'found':
-            print(f"  ✅ PDD: {result['pdd_value']} (Confiança: {result['confidence']})")
-        elif result['status'] == 'not_found':
-            print(f"  ⚠️  PDD não identificada")
-        else:
-            print(f"  ❌ Erro: {result.get('error', 'Desconhecido')}")
-    
-    return results
+# ========== RESUMO FINAL ==========
+elapsed = time.time() - start_time
+print(f"\n{'='*60}")
+print("📊 RESUMO DA SESSÃO")
+print(f"{'='*60}")
+print(f"⏱️  Tempo total: {elapsed/60:.1f} minutos")
+print(f"📄 PDFs processados: {len(pdfs_this_session)}")
+print(f"📊 Chunks indexados: {total_chunks_session}")
+print(f"💰 Custo estimado: ${estimate_cost(total_chunks_session):.4f}")
 
-# ========== SALVAR RESULTADOS ==========
-def save_results(results: List[Dict], filename: str = None):
-    """Salva resultados em JSON"""
-    if filename is None:
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"pdd_extraction_{timestamp}.json"
-    
-    filepath = RESULTS_DIR / filename
-    
-    with open(filepath, 'w', encoding='utf-8') as f:
-        json.dump(results, f, indent=2, ensure_ascii=False)
-    
-    print(f"\n💾 Resultados salvos em: {filepath}")
-    return filepath
+final_stats = tracker.get_stats()
+print(f"\n🎯 TOTAL GERAL:")
+print(f"   ✅ Processados: {final_stats['processed']}")
+print(f"   📊 Total chunks: {final_stats['total_chunks']}")
+print(f"   ❌ Falhas: {final_stats['failed']}")
 
-# ========== GERAR RELATÓRIO ==========
-def generate_report(results: List[Dict]):
-    """Gera relatório resumido"""
-    total = len(results)
-    found = sum(1 for r in results if r['status'] == 'found')
-    not_found = sum(1 for r in results if r['status'] == 'not_found')
-    errors = sum(1 for r in results if r['status'] == 'error')
-    
-    high_conf = sum(1 for r in results if r.get('confidence') == 'Alta')
-    med_conf = sum(1 for r in results if r.get('confidence') == 'Média')
-    low_conf = sum(1 for r in results if r.get('confidence') == 'Baixa')
-    
-    print(f"\n{'='*60}")
-    print("📊 RELATÓRIO FINAL")
-    print(f"{'='*60}")
-    print(f"Total de empresas: {total}")
-    print(f"  ✅ PDD encontrada: {found} ({found/total*100:.1f}%)")
-    print(f"  ⚠️  PDD não identificada: {not_found} ({not_found/total*100:.1f}%)")
-    print(f"  ❌ Erros: {errors}")
-    print(f"\nDistribuição de confiança:")
-    print(f"  🟢 Alta: {high_conf}")
-    print(f"  🟡 Média: {med_conf}")
-    print(f"  🔴 Baixa: {low_conf}")
-    print(f"{'='*60}")
+remaining = len(pdfs_to_process) - len(pdfs_this_session)
+if remaining > 0:
+    print(f"\n⏭️  Execute novamente para processar os {remaining} PDFs restantes")
+    if PDFS_PER_SESSION:
+        print(f"   Estimativa: {(remaining // PDFS_PER_SESSION) + 1} sessões adicionais")
+else:
+    print(f"\n🎉 TODOS OS PDFS FORAM PROCESSADOS!")
 
-# ========== MODO DE USO ==========
-if __name__ == "__main__":
-    import sys
-    
-    # Uso: python search_pdd.py [company_name] [year]
-    # Ou: python search_pdd.py --all [year]
-    
-    if len(sys.argv) > 1:
-        if sys.argv[1] == "--all":
-            year = int(sys.argv[2]) if len(sys.argv) > 2 else 2024
-            results = extract_all_companies(year)
-            generate_report(results)
-            save_results(results)
-        else:
-            company = sys.argv[1]
-            year = int(sys.argv[2]) if len(sys.argv) > 2 else 2024
-            result = extract_pdd(company, year, verbose=True)
-            safe_company = re.sub(r'[<>:"/\\|?*]', '_', company)
-            save_results([result], f"pdd_{safe_company}_{year}.json")
-    else:
-        print("\n💡 Como usar:")
-        print("  python search_pdd.py '3R PETROLEUM' 2024")
-        print("  python search_pdd.py --all 2024")
-        print("\nExemplo interativo:")
-        result = extract_pdd("3R PETROLEUM", 2024, verbose=True)
+print(f"\n📝 Log salvo em: {TRACKING_FILE}")
+print(f"{'='*60}")

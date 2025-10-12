@@ -99,9 +99,129 @@
       "hash": "3a43b3993ecb50fd326d2257f4acbf15",
       "processed_at": "2025-10-10T05:22:13.489565",
       "chunks": 60
+    },
+    "BANCO DO BRASIL.pdf": {
+      "hash": "b4605a588a2a4c94fbe85cb33d69e9e6",
+      "processed_at": "2025-10-10T14:18:32.616616",
+      "chunks": 588
+    },
+    "BANCO PAN.pdf": {
+      "hash": "d82fbd2a87a012a68f386ea5aeaf164d",
+      "processed_at": "2025-10-10T14:18:54.537202",
+      "chunks": 482
+    },
+    "BANCO PINE.pdf": {
+      "hash": "64b9442dcdfb28d7763c0a6fec757d8b",
+      "processed_at": "2025-10-10T14:19:06.099074",
+      "chunks": 296
+    },
+    "BANRISUL.pdf": {
+      "hash": "92dcb9e65270ce1bdc28a081b5da8b68",
+      "processed_at": "2025-10-10T14:19:27.407879",
+      "chunks": 456
+    },
+    "BBSEGURIDADE.pdf": {
+      "hash": "3104caa4061141cd514d1a16e97b05d3",
+      "processed_at": "2025-10-10T14:19:37.055817",
+      "chunks": 250
+    },
+    "BEMOBI.pdf": {
+      "hash": "43bfd9261fb13bf304e242c19bb64800",
+      "processed_at": "2025-10-10T14:19:47.674421",
+      "chunks": 267
+    },
+    "BLAU.pdf": {
+      "hash": "2b7200c542b6dbaf8d6fb7b522bf645c",
+      "processed_at": "2025-10-10T14:20:02.468443",
+      "chunks": 340
+    },
+    "BMG.pdf": {
+      "hash": "a6604c97cee9e0e853bc50360d20af9e",
+      "processed_at": "2025-10-10T14:20:21.753598",
+      "chunks": 228
+    },
+    "BOA SAFRA.pdf": {
+      "hash": "60b643095e5f10e53b83fe79c5f94bdd",
+      "processed_at": "2025-10-10T14:20:32.405493",
+      "chunks": 260
+    },
+    "BOMBRIL.pdf": {
+      "hash": "6a557fadae931ccf387919d3b4acc35d",
+      "processed_at": "2025-10-10T14:20:42.845612",
+      "chunks": 214
+    },
+    "BR PARTNERS.pdf": {
+      "hash": "d6515fb58ff987446c06145f16832d7e",
+      "processed_at": "2025-10-10T14:20:45.802557",
+      "chunks": 37
+    },
+    "BRADESCO.pdf": {
+      "hash": "e561cdc2b2485e899478c009f2572881",
+      "processed_at": "2025-10-10T14:21:09.527705",
+      "chunks": 548
+    },
+    "BRADESPAR.pdf": {
+      "hash": "d319599f93375f22e727975d0cc63dbf",
+      "processed_at": "2025-10-10T14:21:12.472077",
+      "chunks": 91
+    },
+    "BRASILAGRO.pdf": {
+      "hash": "1e437462023c0fc540fc561fbd19db3c",
+      "processed_at": "2025-10-10T14:21:27.312335",
+      "chunks": 306
+    },
+    "BRASKEM.pdf": {
+      "hash": "193dc1d648c8d569ae8f9205784097e0",
+      "processed_at": "2025-10-10T14:21:44.433710",
+      "chunks": 350
+    },
+    "BRAVA ENERGIA.pdf": {
+      "hash": "888d52d51fdb5ccbc0527b27652e08eb",
+      "processed_at": "2025-10-10T14:22:04.213580",
+      "chunks": 482
+    },
+    "BRF.pdf": {
+      "hash": "72df45414bdc3deb999fc048c12935a3",
+      "processed_at": "2025-10-10T14:22:24.620015",
+      "chunks": 444
+    },
+    "BRISANET.pdf": {
+      "hash": "a1995a1721c02e991dee8245f1e6ac9f",
+      "processed_at": "2025-10-10T14:22:39.387926",
+      "chunks": 436
+    },
+    "BRMALLS.pdf": {
+      "hash": "2e8a9a2851b8028ca0012f8817a628f7",
+      "processed_at": "2025-10-10T14:22:52.048074",
+      "chunks": 313
+    },
+    "BTG.pdf": {
+      "hash": "e8de9e721cf6ecd59c94f27201372a4f",
+      "processed_at": "2025-10-10T14:23:04.963545",
+      "chunks": 258
+    },
+    "C&A.pdf": {
+      "hash": "c571d4cc44255c7734414ef2dfe5bd5b",
+      "processed_at": "2025-10-10T14:23:19.046584",
+      "chunks": 314
+    },
+    "CAIXA SEGURIDADE.pdf": {
+      "hash": "5f60e26da6404cfb4f2e2dc4b29fc293",
+      "processed_at": "2025-10-10T14:23:35.030129",
+      "chunks": 358
+    },
+    "CAMIL.pdf": {
+      "hash": "f61a6d56dec28635f63cb0b78d29546d",
+      "processed_at": "2025-10-10T14:23:52.234186",
+      "chunks": 341
+    },
+    "CBA.pdf": {
+      "hash": "879f6620549c4e3e1a8db60280986899",
+      "processed_at": "2025-10-10T14:24:09.842996",
+      "chunks": 354
     }
   },
   "failed_files": {},
-  "last_run": null,
-  "total_chunks": 6869
+  "last_run": "2025-10-10T14:24:09.842996",
+  "total_chunks": 14882
 }
