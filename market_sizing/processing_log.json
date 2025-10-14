@@ -219,9 +219,14 @@
       "hash": "879f6620549c4e3e1a8db60280986899",
       "processed_at": "2025-10-10T14:24:09.842996",
       "chunks": 354
+    },
+    "CCR.pdf": {
+      "hash": "4b646b3dac08bb6adec528ccc310ff8f",
+      "processed_at": "2025-10-14T09:25:16.427904",
+      "chunks": 451
     }
   },
   "failed_files": {},
-  "last_run": "2025-10-10T14:24:09.842996",
-  "total_chunks": 14882
+  "last_run": "2025-10-14T09:25:16.427904",
+  "total_chunks": 15333
 }
