@@ -1,0 +1,803 @@
+  [{
+    "Empresa": "Brava Energia (antiga 3R Petroleum)",
+    "Setor": "Petróleo e Gás",
+    "Faturamento 2024 (R$ mil)": null,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Contas a Receber (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": 28700,
+    "PDD - DRE 2024 (R$ mil)": 28700
+  },
+  {
+    "Empresa": "Três Tentos Agroindustrial S.A.",
+    "Setor": "Agroindustrial",
+    "Faturamento 2024 (R$ mil)": null,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Contas a Receber (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": 38456,
+    "PDD - DRE 2024 (R$ mil)": 21346
+  },
+{
+    "Empresa": "Aeris Indústria e Comércio de Equipamentos para Geração de Energia S.A.",
+    "Setor": "Energia Eólica / Equipamentos Industriais",
+    "Faturamento 2024 (R$ mil)": null,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Contas a Receber (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": 213225,
+    "PDD - DRE 2024 (R$ mil)": 213225
+  },
+  {
+    "Empresa": "AES Tietê Energia (Auren Energia)",
+    "Setor": "Energia Elétrica - Geração",
+    "Faturamento 2024 (R$ mil)": null,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Contas a Receber (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": null,
+    "PDD - DRE 2024 (R$ mil)": null
+  },
+{
+    "Empresa": "AgroGalaxy Participações S.A. (em Recuperação Judicial)",
+    "Setor": "Agronegócio / Distribuição de Insumos",
+    "Faturamento 2024 (R$ mil)": null,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Contas a Receber (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": 1159410,
+    "PDD - DRE 2024 (R$ mil)": 923235   
+  },
+{
+    "Empresa": "Allied Tecnologia S.A.",
+    "Setor": "Tecnologia / Distribuição de Eletrônicos",
+    "Faturamento 2024 (R$ mil)": null,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Contas a Receber (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": 36182,
+    "PDD - DRE 2024 (R$ mil)": 15270
+  },
+  {
+    "Empresa": "Alpargatas S.A.",
+    "Setor": "Calçados e Vestuário",
+    "Faturamento 2024 (R$ mil)": null,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Contas a Receber (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": 79807,
+    "PDD - DRE 2024 (R$ mil)": 15993
+  },
+  {
+    "Empresa": "Alphaville S.A.",
+    "Setor": "Incorporação Imobiliária",
+    "Faturamento 2024 (R$ mil)": null,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Contas a Receber (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": 6766,
+    "PDD - DRE 2024 (R$ mil)": 15356
+  },
+  {
+    "Empresa": "Alupar Investimento S.A.",
+    "Setor": "Energia Elétrica - Transmissão e Geração",
+    "Faturamento 2024 (R$ mil)": null,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Contas a Receber (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": 10086,
+    "PDD - DRE 2024 (R$ mil)": 4450
+  },
+  {
+    "Empresa": "Ambev S.A.",
+    "Setor": "Bebidas / Consumo",
+    "Faturamento 2024 (R$ mil)": null,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Contas a Receber (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": 839934,
+    "PDD - DRE 2024 (R$ mil)": 132720
+  },
+{
+    "Empresa": "Ambipar Participações e Empreendimentos S.A.",
+    "Setor": "Serviços Ambientais",
+    "Faturamento 2024 (R$ mil)": null,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Contas a Receber (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": 19774,
+    "PDD - DRE 2024 (R$ mil)": 4066
+  },
+{
+      "Empresa": "Ânima Holding S.A.",
+    "Setor": "Educação",
+    "Faturamento 2024 (R$ mil)": null,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Contas a Receber (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": 606150,
+    "PDD - DRE 2024 (R$ mil)": 178526
+  },
+  {
+    "Empresa": "Arezzo&Co (Azzas 2154 S.A.)",
+    "Setor": "Moda / Calçados e Vestuário",
+    "Faturamento 2024 (R$ mil)": null,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Contas a Receber (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": 64131,
+    "PDD - DRE 2024 (R$ mil)": 10589
+  },  
+  {
+    "Empresa": "Armac Locação, Logística e Serviços S.A.",
+    "Setor": "Logística / Locação de Máquinas",
+    "Faturamento 2024 (R$ mil)": null,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Contas a Receber (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": 25884,
+    "PDD - DRE 2024 (R$ mil)": 10534
+  },
+{
+    "Empresa": "Atacadão S.A. (Grupo Carrefour Brasil)",
+    "Setor": "Varejo Alimentar / Cash & Carry", 
+    "Faturamento 2024 (R$ mil)": null,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Contas a Receber (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": 210000,
+    "PDD - DRE 2024 (R$ mil)": 13000
+  },
+  {
+    "Empresa": "Atom Educação e Editora S.A.",
+    "Setor": "Educação / Editorial",
+    "Faturamento 2024 (R$ mil)": null,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Contas a Receber (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": 120,
+    "PDD - DRE 2024 (R$ mil)": 112
+  },
+  {
+    "Empresa": "Azul S.A.",
+    "Setor": "Aviação / Transporte Aéreo",
+    "Faturamento 2024 (R$ mil)": null,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Contas a Receber (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": 27724,
+    "PDD - DRE 2024 (R$ mil)": 490
+  }, 
+ {
+    "Empresa": "B3 S.A. - Brasil, Bolsa, Balcão",
+    "Setor": "Infraestrutura de Mercado Financeiro",
+    "Faturamento 2024 (R$ mil)": null,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Contas a Receber (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": 28028,
+    "PDD - DRE 2024 (R$ mil)": null
+  },
+  {
+    "Empresa": "Banco ABC Brasil",
+    "Setor": "Bancário / Serviços Financeiros",
+    "Faturamento 2024 (R$ mil)": null,
+    "Lucro Líquido 2024 (R$ mil)": null,
+    "Contas a Receber (R$ mil)": null,
+    "PDD - Balanço 2024 (R$ mil)": 533598,
+    "PDD - DRE 2024 (R$ mil)": 191204
+  },
+  {
+  "Empresa": "Banco do Brasil S.A.",
+  "Setor": "Bancário / Serviços Financeiros",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 66550407,
+  "PDD - DRE 2024 (R$ mil)": 43997920
+  },
+  {
+  "Empresa": "Banco Bradesco S.A. (MUITO DIFICIL INTERPRETAR)", 
+  "Setor": "Bancário / Serviços Financeiros",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": null,
+  "PDD - DRE 2024 (R$ mil)": null
+  },
+  {
+  "Empresa": "Banco Pan S.A.",
+  "Setor": "Bancário / Serviços Financeiros",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 3104085,
+  "PDD - DRE 2024 (R$ mil)": 2327023
+},
+{
+  "Empresa": "Banco Pine S.A.",
+  "Setor": "Bancário / Serviços Financeiros",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 526732,
+  "PDD - DRE 2024 (R$ mil)": 346881
+},
+{
+  "Empresa": "Banrisul S.A.",
+  "Setor": "Bancário / Serviços Financeiros",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)":  2600500,
+  "PDD - DRE 2024 (R$ mil)": 1334900
+},
+{
+  "Empresa": "BB Seguridade Participações S.A.",
+  "Setor": "Seguros / Previdência / Capitalização",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": null,
+  "PDD - DRE 2024 (R$ mil)": null
+},
+{
+  "Empresa": "Bemobi Mobile Tech S.A.",
+  "Setor": "Tecnologia / Serviços Digitais",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 17738,
+  "PDD - DRE 2024 (R$ mil)": 5237
+},
+{ 
+  "Empresa": "Blau Farmacêutica S.A.",
+  "Setor": "Indústria Farmacêutica",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 33581,
+  "PDD - DRE 2024 (R$ mil)": 14688
+},
+{
+  "Empresa": "Banco BMG S.A.",
+  "Setor": "Bancário / Serviços Financeiros",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 1909713,
+  "PDD - DRE 2024 (R$ mil)": 876257
+},
+{
+  "Empresa": "Boa Safra Sementes S.A.",
+  "Setor": "Agronegócio / Sementes",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 4199,
+  "PDD - DRE 2024 (R$ mil)": 665
+},
+{
+  "Empresa": "Bombril S.A.",
+  "Setor": "Higiene e Limpeza",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 9565,
+  "PDD - DRE 2024 (R$ mil)": 1687
+},
+{
+  "Empresa": "BR Partners (Não consegui encontrar)",
+  "Setor": "Banco de Investimento / Serviços Financeiros",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": null,
+  "PDD - DRE 2024 (R$ mil)": null
+},
+{
+  "Empresa": "Bradespar S.A. (Não consegui encontrar)",
+  "Setor": "Holding de Participações",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": null,
+  "PDD - DRE 2024 (R$ mil)": null
+  },
+   {
+  "Empresa": "BrasilAgro – Companhia Brasileira de Propriedades Agrícolas",
+  "Setor": "Agronegócio / Propriedades Rurais",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 4031,
+  "PDD - DRE 2024 (R$ mil)": 2177
+},
+{
+  "Empresa": "Braskem S.A.",
+  "Setor": "Petroquímico / Químicos",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 70000,
+  "PDD - DRE 2024 (R$ mil)": 104000
+},
+{
+  "Empresa": "BRF S.A.",
+  "Setor": "Alimentos / Proteína Animal",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 726764,
+  "PDD - DRE 2024 (R$ mil)": 28817
+}, 
+{
+  "Empresa": "Brisanet Serviços de Telecomunicações S.A.",
+  "Setor": "Telecomunicações",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 31802,
+  "PDD - DRE 2024 (R$ mil)": 73735
+}, 
+{
+  "Empresa": "brMalls (Allos S.A.)",
+  "Setor": "Shopping Centers / Imobiliário",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": null,
+  "PDD - DRE 2024 (R$ mil)": null
+ },
+{
+  "Empresa": "Banco BTG Pactual S.A.",
+  "Setor": "Bancário / Serviços Financeiros",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 5139334,
+  "PDD - DRE 2024 (R$ mil)": 2844319
+},
+{
+  "Empresa": "C&A Modas S.A.",
+  "Setor": "Varejo de Moda",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 389136,
+  "PDD - DRE 2024 (R$ mil)": null
+},
+{
+  "Empresa": "Caixa Seguridade Participações S.A.",
+  "Setor": "Seguros / Previdência / Capitalização",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": null,
+  "PDD - DRE 2024 (R$ mil)": null
+},
+{
+  "Empresa": "Camil Alimentos S.A.",
+  "Setor": "Alimentos / Consumo",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 38645,
+  "PDD - DRE 2024 (R$ mil)": 14969
+},
+{
+  "Empresa": "Companhia Brasileira de Alumínio - CBA",
+  "Setor": "Metais / Alumínio",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 29834,
+  "PDD - DRE 2024 (R$ mil)": 10527
+},
+{
+  "Empresa": "CCR S.A.",
+  "Setor": "Concessões de Infraestrutura / Mobilidade",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 20624,
+  "PDD - DRE 2024 (R$ mil)": 6346
+},
+{
+  "Empresa": "Grupo SBF S.A. (Centauro)",
+  "Setor": "Varejo Esportivo",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 137,
+  "PDD - DRE 2024 (R$ mil)": 735
+},
+{
+  "Empresa": "Companhia Brasileira de Distribuição (GPA)",
+  "Setor": "Varejo / Supermercados",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 1000,
+  "PDD - DRE 2024 (R$ mil)": 38000
+},
+{
+  "Empresa": "Companhia Energética de Minas Gerais - CEMIG",
+  "Setor": "Energia Elétrica",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 850307,
+  "PDD - DRE 2024 (R$ mil)": 83438
+}, 
+{
+  "Empresa": "Companhia Energética de Pernambuco - CELPE",
+  "Setor": "Energia Elétrica / Distribuição",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 2587000,
+  "PDD - DRE 2024 (R$ mil)": 552000
+}, 
+{
+  "Empresa": "Enel Brasil S.A.",
+  "Setor": "Energia Elétrica",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 5397103,
+  "PDD - DRE 2024 (R$ mil)": 1151207
+}
+,
+{
+  "Empresa": "Companhia de Ferro Ligas da Bahia - FERBASA",
+  "Setor": "Mineração / Metalurgia",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 222,
+  "PDD - DRE 2024 (R$ mil)": null
+},
+{
+  "Empresa": "Companhia de Gás de São Paulo - COMGÁS",
+  "Setor": "Energia / Gás Natural",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 92720,
+  "PDD - DRE 2024 (R$ mil)": 16994
+},
+{
+  "Empresa": "Companhia de Locação das Américas - Unidas",
+  "Setor": "Locação de Veículos",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 219782,
+  "PDD - DRE 2024 (R$ mil)": 52432
+},
+{
+  "Empresa": "Companhia de Saneamento Básico do Estado de São Paulo - SABESP",
+  "Setor": "Saneamento",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 1248209,
+  "PDD - DRE 2024 (R$ mil)": 557789
+},
+{
+  "Empresa": "Companhia de Saneamento de Minas Gerais - COPASA",
+  "Setor": "Saneamento",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 259744,
+  "PDD - DRE 2024 (R$ mil)": 214862
+},
+{
+  "Empresa": "Companhia de Saneamento do Paraná - SANEPAR",
+  "Setor": "Saneamento",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 636354,
+  "PDD - DRE 2024 (R$ mil)": 124439
+},
+{
+  "Empresa": "Companhia Siderúrgica Nacional (CSN)",
+  "Setor": "Siderurgia e Mineração",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 212088,
+  "PDD - DRE 2024 (R$ mil)": 13965
+},
+{
+  "Empresa": "Companhia de Tecidos Norte de Minas - Coteminas",
+  "Setor": "Têxtil / Indústria",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 57643,
+  "PDD - DRE 2024 (R$ mil)": 16236
+},
+{
+  "Empresa": "Companhia de Transmissão de Energia Elétrica Paulista (ISA CTEEP)",
+  "Setor": "Energia Elétrica / Transmissão",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 3817,
+  "PDD - DRE 2024 (R$ mil)": 4870
+},
+{
+  "Empresa": "Cielo S.A.",
+  "Setor": "Serviços Financeiros / Meios de Pagamento",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": null,
+  "PDD - DRE 2024 (R$ mil)": 184736
+},
+{
+  "Empresa": "Clear Sale S.A.",
+  "Setor": "Tecnologia / Serviços de Prevenção à Fraude",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 11180,
+  "PDD - DRE 2024 (R$ mil)": 5898
+},
+{
+  "Empresa": "Cogna Educação S.A.",
+  "Setor": "Educação / Serviços",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 3457033,
+  "PDD - DRE 2024 (R$ mil)": 575612
+},
+{
+  "Empresa": "Construtora Tenda S.A.",
+  "Setor": "Construção Civil / Incorporação Imobiliária",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 472693,
+  "PDD - DRE 2024 (R$ mil)": 137069
+},
+{
+  "Empresa": "Cosan S.A.",
+  "Setor": "Energia / Logística / Combustíveis",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 212701,
+  "PDD - DRE 2024 (R$ mil)": 52839
+},
+{
+  "Empresa": "CPFL Energia S.A.",
+  "Setor": "Energia Elétrica / Geração, Transmissão e Distribuição",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 449676,
+  "PDD - DRE 2024 (R$ mil)": 47854
+},
+{
+  "Empresa": "CM Hospitalar S.A. (Viveo)",
+  "Setor": "Saúde / Distribuição Hospitalar e Produtos Médicos",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 138356,
+  "PDD - DRE 2024 (R$ mil)": 109936
+},
+{
+  "Empresa": "Cruzeiro do Sul Educacional S.A.",
+  "Setor": "Educação / Serviços",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 234726,
+  "PDD - DRE 2024 (R$ mil)": 172492
+},
+{
+  "Empresa": "CSN Mineração S.A.",
+  "Setor": "Mineração / Siderurgia",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 9919,
+  "PDD - DRE 2024 (R$ mil)": 862
+},
+{
+  "Empresa": "CSU Digital S.A.",
+  "Setor": "Tecnologia / Serviços Financeiros",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 13682,
+  "PDD - DRE 2024 (R$ mil)": 953
+},
+{
+  "Empresa": "Cury Construtora e Incorporadora S.A.",
+  "Setor": "Construção Civil / Incorporação Imobiliária",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 132137,
+  "PDD - DRE 2024 (R$ mil)": 51943
+},
+{
+  "Empresa": "Coelce (Enel Distribuição Ceará)",
+  "Setor": "Energia Elétrica / Distribuição",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,  
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 892225,
+  "PDD - DRE 2024 (R$ mil)": 97335
+},
+{
+  "Empresa": "CVC Brasil Operadora e Agência de Viagens S.A.",
+  "Setor": "Turismo / Agenciamento de Viagens",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 125659,
+  "PDD - DRE 2024 (R$ mil)": 12196
+},
+{
+  "Empresa": "Cyrela Brazil Realty S.A. Empreendimentos e Participações",
+  "Setor": "Construção Civil / Incorporação Imobiliária",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 60651,
+  "PDD - DRE 2024 (R$ mil)": 115351
+},
+{
+  "Empresa": "D1000 Varejo Farma Participações S.A.",
+  "Setor": "Varejo / Farmacêutico",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 140,
+  "PDD - DRE 2024 (R$ mil)": 29
+},
+{
+  "Empresa": "Desktop S.A.",
+  "Setor": "Telecomunicações / Provedores de Internet",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 14051,
+  "PDD - DRE 2024 (R$ mil)": 6005
+},
+{
+  "Empresa": "Dexco S.A.",
+  "Setor": "Indústria / Materiais de Construção e Decoração",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 37713,
+  "PDD - DRE 2024 (R$ mil)": 13605
+},
+{
+  "Empresa": "Direcional Engenharia S.A.",
+  "Setor": "Construção Civil / Incorporação Imobiliária",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 54627,
+  "PDD - DRE 2024 (R$ mil)": 52228
+},
+{
+  "Empresa": "Dommo Energia S.A.",
+  "Setor": "Petróleo e Gás / Energia",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": null,
+  "PDD - DRE 2024 (R$ mil)": null
+},
+{
+  "Empresa": "Dotz S.A.",
+  "Setor": "Tecnologia / Fidelização e Serviços Financeiros",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 565,
+  "PDD - DRE 2024 (R$ mil)": 993  
+},
+{
+  "Empresa": "Embraer S.A.",
+  "Setor": "Aeronáutica / Indústria de Defesa e Aviação Comercial",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 75667,
+  "PDD - DRE 2024 (R$ mil)": 121576
+},
+{
+  "Empresa": "Eneva S.A.",
+  "Setor": "Energia / Geração e Comercialização de Energia",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": null,
+  "PDD - DRE 2024 (R$ mil)": null
+},
+{
+  "Empresa": "Engie Brasil Energia S.A.",
+  "Setor": "Energia Elétrica / Geração e Comercialização",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 22396,
+  "PDD - DRE 2024 (R$ mil)": 45061
+},
+{
+  "Empresa": "Enjoei S.A.",
+  "Setor": "Tecnologia / E-commerce",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": null,
+  "PDD - DRE 2024 (R$ mil)": null
+},
+{
+  "Empresa": "Equatorial Energia S.A.",
+  "Setor": "Energia Elétrica / Distribuição e Transmissão",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 585649,
+  "PDD - DRE 2024 (R$ mil)": 630522
+},
+{
+  "Empresa": "EspaçoLaser S.A.",
+  "Setor": "Serviços / Estética e Beleza",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 30000,
+  "PDD - DRE 2024 (R$ mil)": 1753
+},
+{
+  "Empresa": "Estapar Participações S.A. (Allpark Empreendimentos, Participações e Serviços S.A.)",
+  "Setor": "Serviços / Estacionamentos e Mobilidade Urbana",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 250,
+  "PDD - DRE 2024 (R$ mil)": null
+},
+{
+  "Empresa": "Eternit S.A.",
+  "Setor": "Indústria / Materiais de Construção",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 12691,
+  "PDD - DRE 2024 (R$ mil)": 1785
+},
+{
+  "Empresa": "EcoRodovias Infraestrutura e Logística S.A.",
+  "Setor": "Logística / Concessões Rodoviárias",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 11227,
+  "PDD - DRE 2024 (R$ mil)": 4094
+},
+{
+  "Empresa": "EDP - Energias do Brasil S.A.",
+  "Setor": "Energia Elétrica / Geração, Distribuição e Comercialização",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 510709,
+  "PDD - DRE 2024 (R$ mil)": 170654
+},
+{
+  "Empresa": "Eletrobras - Centrais Elétricas Brasileiras S.A.",
+  "Setor": "Energia Elétrica / Geração e Transmissão",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 4772272,
+  "PDD - DRE 2024 (R$ mil)": 391334
+},
+{
+  "Empresa": "Eletromidia S.A.",
+  "Setor": "Comunicação / Mídia e Publicidade Out-of-Home",
+  "Faturamento 2024 (R$ mil)": null,
+  "Lucro Líquido 2024 (R$ mil)": null,
+  "Contas a Receber (R$ mil)": null,
+  "PDD - Balanço 2024 (R$ mil)": 8386,
+  "PDD - DRE 2024 (R$ mil)": 10737 
+}
+]
