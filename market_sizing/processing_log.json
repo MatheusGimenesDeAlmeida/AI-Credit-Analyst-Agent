@@ -224,9 +224,14 @@
       "hash": "4b646b3dac08bb6adec528ccc310ff8f",
       "processed_at": "2025-10-14T09:25:16.427904",
       "chunks": 451
+    },
+    "CELPE.pdf": {
+      "hash": "b3a82d6f7f65a1bbdd12e6c40146df8b",
+      "processed_at": "2025-10-14T09:40:23.088756",
+      "chunks": 638
     }
   },
   "failed_files": {},
-  "last_run": "2025-10-14T09:25:16.427904",
-  "total_chunks": 15333
+  "last_run": "2025-10-14T09:40:23.088756",
+  "total_chunks": 15971
 }

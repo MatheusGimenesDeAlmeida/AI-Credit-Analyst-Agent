@@ -1,0 +1,9 @@
+Receita; Ativo circulante; 
+
+Mapping de Go to Market -> Ranking de empresas com pdd alto 
+
+-> Identificar principais erros do agent, criar métricas com base nas empresas já feitas (identificar se são potenciais indicativos de algum erro
+
+), 
+
+-> Rodar com 20 e identificar quais vieram errados e padrões dos que vieram certo 
